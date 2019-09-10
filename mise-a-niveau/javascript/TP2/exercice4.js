@@ -14,7 +14,7 @@ console.log(map(numbers, carre));
 
 // console.log(numbers.map((x) => x * x));
 
-function pair (x) { return x % 2 === 0; }
+function pair(x) { return x % 2 === 0; }
 
 const filter = (arr, callback) => {
   const t = [];
