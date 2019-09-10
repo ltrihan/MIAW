@@ -1,5 +1,5 @@
-// t = 2;
-// console.log(t);
+t = 2;
+console.log(t);
 
 let t;
 t = 2;
