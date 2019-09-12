@@ -27,3 +27,15 @@ const filter = (arr, callback) => {
 };
 
 console.log(filter(numbers, pair));
+
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+const reduce = (arr, callback, init = 0) => {
+  let sum = init;
+  arr.forEach((number) => {
+    sum = callback(number, sum);
+  });
+  return sum;
+};
+
+console.log(reduce(numbers, reducer));
