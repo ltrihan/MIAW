@@ -13,6 +13,15 @@ console.log(isCodePostalFr('96000')); // false
 console.log(isCodePostalFr('01500')); // true
 console.log(isCodePostalFr('95500')); // true
 
+const regexIsTelephone = /^(0[1-7]\d{8})|(0[1-7]([\s.-]\d{2}){4})$/;
+
+const isTelephone = (str) => regexIsTelephone.test(str);
+
+console.log(isTelephone('0761922560')); // true
+console.log(isTelephone('07-61-92-25-60')); // true
+console.log(isTelephone('07 61 92 25 60')); // true
+console.log(isTelephone('07.61.92.25.60')); // true
+
 const regexIsEmail = /^\w+[@][a-zA-Z]+[.][a-zA-Z]+$/;
 
 const isEmail = (str) => regexIsEmail.test(str);
