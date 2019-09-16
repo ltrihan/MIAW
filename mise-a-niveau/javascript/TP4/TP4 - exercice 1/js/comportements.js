@@ -48,12 +48,24 @@ window.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('ex6').querySelector('p img').classList.add('penche');
 
+  // listeImgTetes.forEach((img) => {
+  //   const removeOrAddPenche = () => {
+  //     if (img.classList.value === 'penche') {
+  //       img.classList.remove('penche');
+  //     } else { img.classList.add('penche'); }
+  //   };
+  //   img.addEventListener('mouseover', removeOrAddPenche);
+  // });
+
   listeImgTetes.forEach((img) => {
-    const removeOrAddPenche = () => {
-      if (img.classList.value === 'penche') {
-        img.classList.remove('penche');
-      } else { img.classList.add('penche'); }
-    };
-    img.addEventListener('mouseover', removeOrAddPenche);
+    img.addEventListener('mouseenter', (event) => {
+      event.target.classList.add('penche');
+    });
+  });
+
+  listeImgTetes.forEach((img) => {
+    img.addEventListener('mouseleave', (event) => {
+      event.target.classList.remove('penche');
+    });
   });
 });
