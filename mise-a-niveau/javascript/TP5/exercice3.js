@@ -13,14 +13,14 @@ const menu = [
 const createMenuHtml = (obj) => {
   const ul = document.createElement('ul');
   document.body.appendChild(ul);
-  obj.forEach((menuElement) => {
-    // si link creer li
+  obj.forEach((menuElement) => { // si link creer li
     if (menuElement.hasOwnProperty('link')) {
       const li = document.createElement('li');
-      document.ul.appendChild(li);
+      li.innerHTML = menuElement.title;
+      ul.appendChild(li);
+    } else { // si objet rappeler la fonction elle même
+      // TODO
     }
-    // si objet rappeler la fonction elle même
   });
 };
-
 createMenuHtml(menu);
