@@ -23,7 +23,6 @@ console.log(isTelephone('07 61 92 25 60')); // true
 console.log(isTelephone('07.61.92.25.60')); // true
 
 const regexIsEmail = /^\w+[@][a-zA-Z]+[.][a-zA-Z]+$/;
-
 const isEmail = (str) => regexIsEmail.test(str);
 
 console.log(isEmail('test@test.com')); // true
