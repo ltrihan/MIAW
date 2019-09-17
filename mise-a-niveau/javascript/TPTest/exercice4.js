@@ -12,4 +12,4 @@ const anagramme = (s1, s2) => {
   return s1.split('') === s2.split('');
 };
 
-console.log(anagramme("chien", "ni che"));
+console.log(anagramme('chien', 'ni che'));
