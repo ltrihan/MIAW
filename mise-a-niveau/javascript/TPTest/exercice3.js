@@ -6,11 +6,6 @@
 
 // Longueur attendue : 1 à 5-6 lignes
 
-const majuscules = (s) => {
-  s.split(' ').forEach((word) => {
-    word.toUpperCase();
-  });
-  return s;
-};
+const majuscules = (s) => s.split(' ').map((word) => word.charAt(0).toUpperCase() + word.substr(1).toLowerCase()).join(' ');
 
 console.log(majuscules('il fait beau'));

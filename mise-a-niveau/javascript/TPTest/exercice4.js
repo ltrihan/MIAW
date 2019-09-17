@@ -6,10 +6,6 @@
 
 // Longueur attendue : 1 ligne
 
-const anagramme = (s1, s2) => {
-  console.log(s1.split('').sort().join(',').trim());
-  console.log(s2.split('').sort().join(',').trim());
-  return s1.split('') === s2.split('');
-};
+const anagramme = (s1, s2) => s1.split('').sort().join('').trim() === s2.split('').sort().join('').trim();
 
 console.log(anagramme('chien', 'ni che'));

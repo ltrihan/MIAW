@@ -10,4 +10,5 @@ const miroir = (tab) => {
   } return false;
 };
 
-console.log(miroir([1, 2, 1, 3]));
+console.log(miroir([1, 2, 2, 2, 1]));
+console.log(miroir([1, 2, 3, 1]));
