@@ -1,9 +1,9 @@
 const data = {
-  "window": {"title": "Sample Widget", "width": 500, "height": 500},
-  "image": {"src": "images/logo.png", "coords": [250, 150, 350, 400]},
-  "messages": [
-  {"text": "Save", "offset": [10, 30]},
-  {"text": "Quit", "offset": [30, 10]}]
+  window: { title: 'Sample Widget', width: 500, height: 500 },
+  image: { src: 'images/logo.png', coords: [250, 150, 350, 400] },
+  messages: [
+    { text: 'Save', offset: [10, 30] },
+    { text: 'Quit', offset: [30, 10] }],
 };
 
 // récupérer ...
@@ -17,4 +17,4 @@ console.log(data.image.coords[2]);
 console.log(data.messages.length);
 
 // l’offset y du dernier message
-console.log(data.messages[1].offset);
+console.log(data.messages[data.messages.length - 1].offset[1]);
