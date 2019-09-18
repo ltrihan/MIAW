@@ -45,28 +45,25 @@ toutReafficherEx4.addEventListener('click', () => {
 
 // Exercice 5
 
-const ulEx5 = document.querySelector('#lettresEtNombres');
+// const ulEx5 = document.querySelector('#lettresEtNombres');
 const liEx5 = document.querySelectorAll('#lettresEtNombres li');
 const toutReafficherEx5 = document.querySelector('#ex5 .control');
 
-const checkClassList = (li) => li.classList.value;
-
-
-const liClickedClass = () => {
-  liEx5.forEach((li) => {
-    // quand je clique sur un li
-    // je veux récupérer sa classe
-    li.addEventListener('click', () => checkClassList(li));
-  });
+const checkClassList = (e) => {
+  const classe = e.target.classList.value;
+  const liWithSameClass = document.querySelectorAll(`#lettresEtNombres li.${classe}`);
+  liWithSameClass.forEach((li) => li.classList.add('invisible'));
 };
 
 liEx5.forEach((li) => {
-  // pour cacher tous les autres li ayant la même classe
-  if (li.classList.contains(liClickedClass)) {
-    li.classList.add('invisible');
-  }
+  // quand je clique sur un li
+  // je veux récupérer sa classe
+  li.addEventListener('click', (e) => checkClassList(e));
 });
 
+const removeInvisibleClass = () => liEx5.forEach((li) => li.classList.remove('invisible'));
+
+toutReafficherEx5.addEventListener('click', removeInvisibleClass);
 
 // Exercice 6
 
@@ -76,5 +73,5 @@ const liEx6 = document.querySelectorAll('#ex6 ul li');
 const moveLiEx6 = () => ulEx6.appendChild(liEx6);
 
 liEx6.forEach((li) => {
-  li.addEventListener('click', moveLiEx6);
+  li.addEventListener('click', () => moveLiEx6());
 });
