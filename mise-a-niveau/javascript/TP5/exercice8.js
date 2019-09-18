@@ -5,7 +5,6 @@ fetch(url)
   .then((data) => {
     console.log(data);
     const ul = document.createElement('ul');
-
   })
   .catch((err) => { // en cas d'échec
     console.log(err.message);
