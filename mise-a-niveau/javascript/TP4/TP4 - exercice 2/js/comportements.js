@@ -1,9 +1,9 @@
 // Exercice 1
 
 const deleteBtnEx1 = document.querySelector('#boutonSupprimerEx1');
-const li = document.querySelector('#ex1 ul li');
+const liEx1 = document.querySelector('#ex1 ul li');
 const ul = document.querySelector('#ex1 ul');
-const deleteFirstLi = () => ul.removeChild(li);
+const deleteFirstLi = () => ul.removeChild(liEx1);
 
 deleteBtnEx1.addEventListener('click', deleteFirstLi);
 
@@ -32,3 +32,13 @@ toutReafficherEx3.addEventListener('click', () => {
 });
 
 // Exercice 4
+
+const liEx4 = document.querySelectorAll('#lesPrenoms li');
+
+liEx4.forEach((li) => li.addEventListener('click', () => li.classList.add('invisible')));
+
+const toutReafficherEx4 = document.querySelector('#ex3 .control');
+
+toutReafficherEx4.addEventListener('click', () => {
+  liEx4.forEach((li) => li.classList.remove('invisible'));
+});
