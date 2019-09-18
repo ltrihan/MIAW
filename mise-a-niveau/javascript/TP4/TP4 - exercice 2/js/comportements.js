@@ -23,8 +23,12 @@ const ulEx3 = document.querySelector('#ingredients');
 
 const toutReafficherEx3 = document.querySelector('#ex3 .control');
 
-ulEx3.addEventListener('click', liEx3.classList.add('invisible'));
+ulEx3.addEventListener('click', () => {
+  liEx3.classList.add('invisible');
+});
 
-toutReafficherEx3.addEventListener('click', liEx3.classList.remove('invisible'));
+toutReafficherEx3.addEventListener('click', () => {
+  liEx3.classList.remove('invisible');
+});
 
 // Exercice 4
