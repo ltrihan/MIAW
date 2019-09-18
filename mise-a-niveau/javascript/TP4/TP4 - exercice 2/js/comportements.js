@@ -37,7 +37,7 @@ const liEx4 = document.querySelectorAll('#lesPrenoms li');
 
 liEx4.forEach((li) => li.addEventListener('click', () => li.classList.add('invisible')));
 
-const toutReafficherEx4 = document.querySelector('#ex3 .control');
+const toutReafficherEx4 = document.querySelector('#ex4 .control');
 
 toutReafficherEx4.addEventListener('click', () => {
   liEx4.forEach((li) => li.classList.remove('invisible'));
