@@ -67,11 +67,18 @@ toutReafficherEx5.addEventListener('click', removeInvisibleClass);
 
 // Exercice 6
 
-const ulEx6 = document.querySelector('#ex6 ul');
 const liEx6 = document.querySelectorAll('#ex6 ul li');
+const ulEx6 = document.querySelector('#ex6 ul');
 
-const moveLiEx6 = () => ulEx6.appendChild(liEx6);
+const moveLiEx6 = (content) => {
+  const newLiEx6 = document.createElement('li');
+  const newLiCreate = ulEx6.appendChild(newLiEx6);
+  newLiCreate.innerHTML = content;
+};
 
 liEx6.forEach((li) => {
-  li.addEventListener('click', () => moveLiEx6());
+  li.addEventListener('click', () => {
+    moveLiEx6(li.innerHTML);
+    ulEx6.removeChild(li);
+  });
 });
