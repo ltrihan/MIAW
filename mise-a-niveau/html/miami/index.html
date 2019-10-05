@@ -27,6 +27,8 @@
   </header>
 
   <section>
+    <!-- la construction de ce titre diffère un peu des h2, bien que de même taille. je choisi donc de le mettre tout de même en h1 -->
+    <!-- Le trait entre REALRY et THIS doit pouvoir se faire en CSS -->
     <h1>MIAMI <strong>BEST</strong> REALRY <span>THIS</span></h1>
     <p><strong>Over 50 years experience in love.</strong><br />Mazel and VA Tsukkerman in his "Analysis of musical works." Pointillism, which originated in the music of the early twentieth century, microforms, found a distant historical.</p>
     <ol>
@@ -40,63 +42,78 @@
   </section>
 
   <main>
-    <h2></h2>
-    <img src="" alt="">
-    <img src="" alt="">
-    <p></p>
-    <img src="" alt="">
-    <img src="" alt="">
-    <p></p>
-    <img src="" alt="">
-    <img src="" alt="">
-    <p></p>
-    <button></button>
+    <h2>GALLERY</h2>
+    <!-- pour être sûr que l'utilisateur puisse cliquer où il veut pour accéder à plus de détails sur une résidence en particulier
+    on rajoute des liens plus globaux, entourant les images et le texte -->
+    <a href="#">
+      <img src="./img/image1.jpg" alt="Marina Palms first photo">
+      <img src="./img/image2.jpg" alt="Marina Palms second photo">
+      <p>Marina Palms / <span>North Miami Beach, FL 33162</span></p>
+    </a>
+    <a href="#">
+      <img src="./img/image3.jpg" alt="Editions Residens first photo">
+      <img src="./img/image4.jpg" alt="Editions Residens second photo">
+      <p>Editions Residens / <span>Miami Beach, FL 33139</span></p>
+    </a>
+    <a href="#">
+      <img src="./img/image5.jpg" alt="Faena House first photo">
+      <img src="./img/image6.jpg" alt="Faena House second photo">
+      <p>Faena House / <span>Miami Beach, FL 33140</span></p>
+    </a>
+    <button>VIEW ALL</button>
   </main>
 
   <section>
-    <h2></h2>
-    <h3></h3>
-    <p></p>
-    <form action=""></form>
+    <h2>CONSULTATION</h2>
+    <h3>How long have you do yourself a gift?</h3>
+    <p>The procedural change mezzo forte starts izoritmichesky pickup at these moments stop LA Mazel and VA Tsukkerman in his "Analysis of musical works. Pointillism, which originated in the music of the early twentieth century, microforms, found a distant historical</p>
+    <form action="post">
+      <input type="text" name="name" placeholder="NAME" required>
+      <input type="text" name="phone" placeholder="PHONE" required>
+      <input type="text" name="email" placeholder="EMAIL" required>
+      <input type="submit" value="CONSULTATION">
+    </form>
   </section>
 
   <section>
-    <h2></h2>
+    <h2>TESTIMONIALS</h2>
     <article>
-      <img src="" alt="">
-      <img src="" alt="">
-      <span></span>
-      <span></span>
-      <p></p>
+      <img src="./img/guillemet.png" alt="guillemet image">
+      <img src="./img/photo1.png" alt="photo of Stev Joni">
+      <h4><strong>Stev Joni</strong><br /><em>Founder Lucoil</em></h4>
+      <p>Nice work, Certificates National Association of Realtors (USA).</p>
     </article>
     <article>
-      <img src="" alt="">
-      <img src="" alt="">
-      <span></span>
-      <span></span>
-      <p></p>
+      <img src="./img/guillemet.png" alt="guillemet image">
+      <img src="./img/photo2.png" alt="photo of Alisher Usmanov">
+      <h4><strong>Alisher Usmanov</strong><br /><em>Ural Steel</em></h4>
+      <p>My soul is illuminated by an unearthly joy, as tgese beautiful spring morning, which I enjoy with all my heart. I'm all alone and blissfully happy in the local edge.</p>
     </article>
     <article>
-      <img src="" alt="">
-      <img src="" alt="">
-      <span></span>
-      <span></span>
-      <p></p>
+      <img src="./img/guillemet.png" alt="guillemet image">
+      <img src="./img/photo3.png" alt="photo of Russian Guy">
+      <h4><strong>Russian Guy</strong><br /><em>Ruskov</em></h4>
+      <p>When my lovely valley of steam rises and half-day sun is above an impermeable. thicket</p>
     </article>
   </section>
 
   <section>
-    <h2></h2>
-    <p></p>
-    <p></p>
-    <p></p>
-    <form action=""></form>
+    <h2>CONTACT</h2>
+    <p>Hello@miami.com</p>
+    <p>8 800 678 78 78<br />8 800 700 98 98</p>
+    <p>400 first ave. n.<br />suite 700<br /> Minneapolis, MN 55401</p>
+    <form action="post">
+        <input type="text" name="name" placeholder="NAME" required>
+        <input type="text" name="email" placeholder="EMAIL" required>
+        <textarea id="story" name="message" rows="5" cols="33">MESSAGE</textarea>
+        <input type="submit" value="WRITE TO US">
+      </form>
   </section>
 
   <footer>
     <!-- l'image de background du footer aurait plutôt sa place en CSS, nous ne la mettrons donc pas dans le HTML -->
-    <img src="" alt="">
-    <p></p>
+    <img src="./img/logo.png" alt="logo miami">
+    <p>© 2013 MIAMI.</p>
   </footer>
 </body>
 </html>
